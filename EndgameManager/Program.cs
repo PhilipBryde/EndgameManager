@@ -85,7 +85,7 @@ namespace EndgameManager
             Console.Write("Indtast karakterens Class (Warrior eller Mage): ");
             string charClass = Console.ReadLine();
 
-            // Vi bruger parametre (@Navn, @Class) for at undgå SQL-injection (Vigtigt at vise læreren!)
+            // Vi bruger parametre
             string sql = "INSERT INTO Character (Name, Class, CurrentXP) VALUES (@Navn, @Class, 0)";
 
             using (SqliteCommand command = new SqliteCommand(sql, connection))
